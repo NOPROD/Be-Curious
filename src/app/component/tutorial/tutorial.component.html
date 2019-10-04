@@ -1,0 +1,115 @@
+<div class="tutorial-box {{ colorFilter.filterState }}">
+  <div class="tutorial-header">
+    <div class="tutorial-title" [innerHTML]="tutorial.tutoTitle"></div>
+    <svg-icon
+      src="/assets/images/theme/{{
+        tutorial.tutoTitle.toLocaleLowerCase()
+      }}.svg"
+      class="title-svg "
+      [svgStyle]="{
+        'width.px': 100,
+        fill: 'rgb(246, 254, 254)'
+      }"
+      [applyCss]="true"
+      nz-tooltip
+      nzPlacement="bottom"
+      nzTitle="{{ tutorial.tutoTitle }}"
+    ></svg-icon>
+    <app-color-filter></app-color-filter>
+  </div>
+  <div class="tutorial-intro">
+    <div class="intro-content" [innerHTML]="tutorial.intro"></div>
+
+    <img
+      class="intro-picture"
+      *ngIf="tutorial.image.length > 1"
+      src="/assets/images/orealy/{{ tutorial.image }}"
+    />
+  </div>
+  <div
+    class="tutorial-article"
+    *ngFor="let tuto of tutorial.content; let index = index"
+  >
+    <div
+      class="indent article-box {{
+        tuto.image.length > 1 ? 'article-flex' : ''
+      }} {{ tuto.underText.length > 1 ? 'article-column' : '' }} "
+    >
+      <div *ngIf="tuto.subText[0].length > 1">
+        <div
+          class="article-title"
+          *ngIf="tuto.subTitle.length > 0"
+          [innerHTML]="tuto.subTitle"
+        ></div>
+        <div
+          class="article-text"
+          *ngFor="let subText of tuto.subText"
+          [innerHTML]="subText"
+        ></div>
+      </div>
+      <img
+        *ngIf="tuto.image.length > 1 && tuto.underText[0] === '' && index === 0"
+        class="intro-picture"
+        src="/assets/images/orealy/{{ tuto.image }}"
+      />
+    </div>
+    <div></div>
+    <div *ngIf="tuto.underText[0].length > 1">
+      <div
+        *ngFor="let underText of tuto.underText; let index = index"
+        class="article-box"
+      >
+        <ng-template #imgIcon>
+          <img
+            *ngIf="tuto.image.length > 1 && index === 0"
+            class="intro-picture"
+            src="/assets/images/orealy/{{ tuto.image }}"
+          />
+        </ng-template>
+        <div
+          class="svg-box"
+          *ngIf="
+            tuto.image.length > 1 &&
+              tuto.underText[0].length > 1 &&
+              index === 0;
+            else imgIcon
+          "
+        >
+          <img
+            class="tutorial-svg"
+            src="/assets/images/orealy/{{ tuto.image }}"
+            nz-tooltip
+            nzPlacement="bottom"
+            nzTitle="{{ tuto.textImage }}"
+          />
+          <div class="svg-description" [innerHTML]="tuto.textImage"></div>
+        </div>
+        <div
+          class="article-ide ide-small"
+          *ngIf="tuto.codeContent[index]?.length > 1"
+        >
+          <app-editor></app-editor>
+        </div>
+        <div class="article-text" [innerHTML]="underText"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tutorial-ide ">
+    <div class="ide-title">
+      <p>Un peu de code !</p>
+    </div>
+    <div class="ide-exercice ide-xl">
+      <app-editor></app-editor>
+    </div>
+    <!-- <div class="ide-result ide-xl">
+      <app-editor></app-editor>
+    </div> -->
+  </div>
+
+  <app-btn-navigation
+    [goTo]="'theme'"
+    [home]="'choice'"
+    [text]="{ goTo: 'theme', home: 'Retour' }"
+  ></app-btn-navigation>
+</div>

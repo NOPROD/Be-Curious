@@ -1,0 +1,30 @@
+<button nz-button nzType="primary" nzSize="large" (click)="displayMenu()">
+  Contact
+</button>
+<div class="contact-toogle">
+  <div class="contact-icon">
+    <svg-icon
+      class="contact-icon"
+      src="/assets/images/contact/{{ icons[0].name }}.svg"
+      [svgStyle]="{
+        'width.px': 100,
+        fill: 'rgb(246, 254, 254)'
+      }"
+      [applyCss]="true"
+    ></svg-icon>
+    <p>{{ icons[0].text }}</p>
+  </div>
+  <div class="contact-icon">
+    <svg-icon
+      (click)="openSlack()"
+      class="contact-icon"
+      src="/assets/images/contact/{{ icons[1].name }}.svg"
+      [svgStyle]="{
+        'width.px': 100,
+        fill: 'rgb(246, 254, 254)'
+      }"
+      [applyCss]="true"
+    ></svg-icon>
+    <p>{{ icons[1].text }}</p>
+  </div>
+</div>

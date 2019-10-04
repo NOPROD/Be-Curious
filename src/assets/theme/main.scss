@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  background-image: linear-gradient(
+    to right bottom,
+    #292f3d,
+    #293145,
+    #2a334d,
+    #2b3555,
+    #2d365d,
+    #30375e,
+    #323960,
+    #353a61,
+    #373c5d,
+    #3a3d58,
+    #3c3f54,
+    #3e404f
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+// @-moz-document url-prefix() {
+//   body {
+//     height: inherit;
+//   }
+// }
+
+// opacity allways 0 cause animeProvider will make the job
+.main-content {
+  padding: 0px 0px 1px 0px; // Jesus Why ?!
+  opacity: 0;
+  @media only screen and (min-width: 600px) {
+    margin-left: 100px;
+  }
+  min-height: calc(100% - 50px);
+}
+
+.white {
+  color: white;
+}
+
+.body-h-auto {
+  height: auto;
+}

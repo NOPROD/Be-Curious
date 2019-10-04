@@ -1,0 +1,25 @@
+app-second-header {
+  text-align: center;
+}
+
+.header-second {
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+
+.ml12 {
+  color: white;
+  font-weight: 200;
+  font-size: 2.8em;
+  @media only screen and (max-width: 600px) {
+    font-size: 1.8em;
+  }
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+
+.ml12 .letter {
+  opacity: 0;
+  display: inline-block;
+  line-height: 1em;
+}

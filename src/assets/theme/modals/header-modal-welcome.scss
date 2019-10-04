@@ -1,0 +1,84 @@
+h1.ml8 {
+  font-weight: 900;
+  font-size: 4.5em;
+  @media only screen and (max-width: 600px) {
+    font-size: 3.5em;
+  }
+  color: #fff;
+  width: 3em;
+  opacity: 0;
+}
+
+.ml8 .letters-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -360px;
+  bottom: 0;
+  height: 1em;
+  text-align: center;
+}
+
+.ml8 .letters {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  line-height: 0.7em;
+  right: -0.12em;
+  top: -0.3em;
+  font-size: 50px;
+  text-align: center;
+  @media only screen and (max-width: 600px) {
+    font-size: 36px;
+    top: -0.45em;
+  }
+}
+
+.ml8 .bang {
+  font-size: 1.4em;
+  top: auto;
+  left: 10px;
+  @media only screen and (max-width: 600px) {
+    font-size: 60px;
+    top: -10px;
+  }
+}
+
+.ml8 .circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -360px;
+  bottom: 0;
+}
+
+.ml8 .circle-dark {
+  width: 6em;
+  height: 1.5em;
+  background-color: #4f7b86;
+  border-radius: 3em;
+  z-index: 1;
+}
+
+.ml8 .intro-left {
+  top: -0.4em;
+}
+
+.ml8 .intro-letters-container {
+  top: 50px;
+  bottom: auto;
+  @media only screen and (max-width: 600px) {
+    top: 70px;
+  }
+}
+
+.ml8 .intro-bang {
+  top: 0px;
+}
+
+.ml8 .intro-circle {
+  top: -12.5em;
+  z-index: -1 !important;
+}

@@ -1,0 +1,23 @@
+<div class="ant-notification-notice-content">
+  <div class="ant-notification-notice-with-icon">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars2"></div>
+    <div id="stars"></div>
+    <div class="ant-notification-notice-message">{{ successData.title }}</div>
+    <div class="ant-notification-notice-description">
+      <svg-icon
+        src="/assets/images/success/{{ successData.name }}.svg"
+        [svgStyle]="{
+          'width.px': 75,
+          fill: 'rgb(0, 0, 0)',
+          'padding-top.px': 25
+        }"
+        [applyCss]="true"
+      ></svg-icon>
+      <p class="notification-content-description">
+        {{ successData.description }}
+      </p>
+    </div>
+  </div>
+</div>

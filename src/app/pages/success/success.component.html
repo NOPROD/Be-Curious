@@ -1,0 +1,44 @@
+<div class="main-content">
+  <app-second-header [title]="title"></app-second-header>
+  <div class="input-center white">
+    <div class="success-content">
+      <p>Section in progress, however you have success ...</p>
+    </div>
+    <div class="success-box">
+      <div>
+        <p>
+          Média vu :
+          {{ userData.mediaView.article + userData.mediaView.video }} /
+          {{ userData.max }}
+        </p>
+        <p>Nombre d'article lu : {{ userData.mediaView.article }}</p>
+        <p>Nombre de vidéo : {{ userData.mediaView.video }}</p>
+        <p>Vous avez visité ce site {{ userData.numberVisite }} fois.</p>
+        <p>Vous avez débloqué {{ count }} succès !</p>
+      </div>
+      <div nz-row>
+        <div nz-row nzType="flex" nzJustify="center" nzAlign="middle">
+          <div class="success-box" *ngFor="let success of allSuccess">
+            <svg-icon
+              src="/assets/images/success/{{ success.name }}.svg"
+              [svgStyle]="{
+                'width.px': 75,
+                fill: 'rgb(0, 0, 0)'
+              }"
+              [applyCss]="true"
+              class="success-svg {{ success.enabled ? 'gold-success' : '' }}"
+              nz-popover
+              nzPlacement="bottom"
+              nzTitle="{{ success.title }}"
+              nzContent="{{
+                success.enabled
+                  ? success.description
+                  : 'Vous devez faire quelque chose pour debloquer ce succès'
+              }}"
+            ></svg-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

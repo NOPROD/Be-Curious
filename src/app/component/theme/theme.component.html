@@ -1,0 +1,11 @@
+<div class="theme-box">
+  <div class="theme-title" *ngFor="let tutorial of tutorial"></div>
+
+  <div class="theme-links" *ngFor="let tutorial of tutorial"></div>
+</div>
+
+<app-btn-navigation
+  [goTo]="'article'"
+  [home]="'choice'"
+  [text]="{ goTo: 'article', home: 'home' }"
+></app-btn-navigation>

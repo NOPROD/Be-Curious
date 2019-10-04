@@ -1,0 +1,85 @@
+app-result-box {
+  padding: 10px 70px 150px 70px;
+  @media only screen and (max-width: 600px) {
+    padding: 10px 10px 150px 10px;
+  }
+}
+
+.result-card {
+  max-height: 300px;
+  background: none;
+}
+
+.ant-card-cover img {
+  width: 300px;
+  height: 190px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 27px;
+  box-shadow: 6px 11px 20px #7e7e7e34;
+}
+.ant-card-body {
+  background-image: radial-gradient(
+    circle farthest-corner at 50% -78.5%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 0, 0, 0) 95%
+  );
+  width: 300px;
+  height: 200px;
+  padding: 5px 5px 24px 5px;
+  text-align: center;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 20px -45px 20px #7e7e7e34;
+}
+
+.ant-card-meta-title {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ant-card-meta-detail {
+  display: grid;
+}
+
+.ant-card-meta-description {
+  font-weight: 400;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ant-card {
+  border-radius: 30px;
+  box-shadow: 10px -25px 20px #7e7e7e34;
+}
+
+.ant-card-bordered {
+  border: none;
+}
+
+.ant-row {
+  padding: 30px;
+}
+
+.type-icon {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  font-size: 20px;
+  box-shadow: -2px -1px 39px #051787;
+}
+
+// 98% cause we need to break the line.. no other solution...
+.result-tag {
+  position: absolute;
+  bottom: -88px;
+  width: 98%;
+  line-height: 30px;
+}
+
+// Crappy but no other solution to break this space...
+.ant-card-meta-detail > div:not(:last-child) {
+  margin-bottom: 0px;
+}
+
+.result-type-icon {
+}

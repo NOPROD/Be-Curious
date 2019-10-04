@@ -1,0 +1,15 @@
+<app-menu class="menu"></app-menu>
+
+<svg-icon
+  class="menu-mobile-icon"
+  [svgStyle]="{
+    'width.px': 50,
+    fill: 'rgb(246, 254, 254)'
+  }"
+  src="/assets/images/menu/mobile-menu.svg"
+  [applyCss]="true"
+  (click)="displayMenu()"
+></svg-icon>
+<ng-template #template> <app-custom-success></app-custom-success> </ng-template>
+<router-outlet></router-outlet>
+<app-footer class="footer"></app-footer>

@@ -1,0 +1,59 @@
+<nz-input-group
+  class="input-grp-center"
+  [nzCompact]="true"
+  [nzSuffix]="suffixTemplate"
+  [nzAddOnAfter]="inputOptions"
+>
+  <input
+    id="input-search"
+    type="text"
+    nz-input
+    [(ngModel)]="inputValue"
+    placeholder="Recherche ..."
+    [nzAutocomplete]="auto"
+  />
+  <nz-autocomplete nzBackfill #auto>
+    <nz-auto-option *ngFor="let option of options" [nzValue]="option">
+      {{ option }}
+    </nz-auto-option>
+  </nz-autocomplete>
+</nz-input-group>
+<nz-collapse class="input-collapse">
+  <nz-collapse-panel [nzActive]="panel.active" [nzDisabled]="panel.disabled"
+    ><app-options
+      [listOfOption]="techOptions"
+      [placeHolder]="'Sélectionner un tag ( disabled )'"
+    ></app-options>
+    <app-options
+      [listOfOption]="formatOptions"
+      [placeHolder]="'Sélectionner un format ( disabled )'"
+    ></app-options>
+    <app-options
+      [listOfOption]="langOptions"
+      [placeHolder]="'Sélectionner une langue ( disabled )'"
+    ></app-options></nz-collapse-panel
+></nz-collapse>
+<ng-template #suffixTemplate>
+  <i
+    nz-icon
+    nz-tooltip
+    class="ant-input-clear-icon"
+    nzTheme="fill"
+    nzType="close-circle"
+    *ngIf="inputValue"
+    (click)="inputValue = null"
+  ></i
+></ng-template>
+
+<ng-template #inputOptions>
+  <i
+    nz-icon
+    nz-tooltip
+    class="input-option-icon"
+    nzTheme="fill"
+    nzType="setting"
+    nzTheme="twotone"
+    (click)="toogleSettings()"
+  ></i>
+</ng-template>
+<div></div>

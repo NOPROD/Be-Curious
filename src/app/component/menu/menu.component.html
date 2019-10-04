@@ -1,0 +1,23 @@
+<div class="menu-wrap">
+  <svg-icon
+    class="menu-icon"
+    *ngFor="let icon of icons; let i = index"
+    src="/assets/images/menu/{{ icon.name }}.svg"
+    routerLink="/{{ icon.name }}"
+    routerLinkActive="active"
+    [svgStyle]="{
+      'width.px': 50,
+      fill: 'rgb(246, 254, 254)'
+    }"
+    [applyCss]="true"
+    nz-tooltip
+    nzPlacement="right"
+    nzTitle="{{ icon.displayName }}"
+    (click)="resetStrategy(i)"
+  ></svg-icon>
+</div>
+<!-- home
+settings
+compte
+a propos
+Quizz -->

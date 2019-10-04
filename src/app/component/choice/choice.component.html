@@ -1,0 +1,27 @@
+<div nz-row>
+  <p>Que voulez vous apprendre aujourd'hui ?</p>
+  <div
+    class="choice-boxs"
+    nz-row
+    nzType="flex"
+    nzJustify="center"
+    nzAlign="middle"
+  >
+    <div class="choice-box" *ngFor="let icon of icons">
+      <svg-icon
+        src="/assets/images/theme/{{ icon.name }}.svg"
+        class="choice-svg {{ icon.enable ? '' : 'disabled' }}"
+        [svgStyle]="{
+          'width.px': 100,
+          fill: 'rgb(246, 254, 254)'
+        }"
+        [applyCss]="true"
+        nz-tooltip
+        nzPlacement="bottom"
+        nzTitle="{{ icon.displayName }}"
+        (click)="setStrategy('article', icon.tutoTitle, icon.enable)"
+      ></svg-icon>
+      <div *ngIf="icon.enable">Extrait disponible (update 03/07)</div>
+    </div>
+  </div>
+</div>

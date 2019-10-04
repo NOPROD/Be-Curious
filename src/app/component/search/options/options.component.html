@@ -1,0 +1,20 @@
+<nz-select
+  style="width: 200px;"
+  #event
+  nzMode="multiple"
+  [nzSize]="'small'"
+  [nzPlaceHolder]="placeHolder"
+  [(ngModel)]="listOfSelectedValue"
+  (nzOpenChange)="nzOpenChange(event.nzAutoClearSearchValue)"
+>
+  <ng-container
+    (onclick)="nzOnSearch(event)"
+    *ngFor="let option of listOfOption"
+  >
+    <nz-option
+      [nzLabel]="option.tag"
+      [nzValue]="option.tag"
+      *ngIf="isNotSelected(option)"
+    ></nz-option>
+  </ng-container>
+</nz-select>

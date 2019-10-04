@@ -1,0 +1,180 @@
+.tutorial-box {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  // Yeah, 61px precisely, cause end of a line take 11 dead pixel
+  padding: 25px 50px 25px 61px;
+  @media only screen and (max-width: 600px) {
+    padding: 25px 25px 25px 25px;
+  }
+}
+
+.intro-picture {
+  width: 50vh;
+  @media only screen and (max-width: 600px) {
+    width: 330px;
+    padding: 20px 0px 25px 0px;
+  }
+}
+@-moz-document url-prefix() {
+  .intro-picture {
+    width: 85vh;
+    @media only screen and (max-width: 600px) {
+      width: 330px;
+      padding: 20px 0px 25px 0px;
+    }
+  }
+}
+
+.tutorial-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorial-svg {
+  width: auto;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.tutorial-intro {
+  display: flex;
+  flex-flow: row;
+  padding-bottom: 50px;
+  @media only screen and (max-width: 600px) {
+    flex-flow: column;
+    padding-bottom: 25px;
+  }
+  align-items: center;
+}
+
+.article-text {
+  padding: 5px 0px 10px 0px;
+}
+
+.intro-content {
+  @media only screen and (max-width: 600px) {
+    padding: 30px 0px 0px 0px;
+  }
+}
+
+.ide-title {
+  text-align: center;
+  // padding: ;
+}
+
+.ide-xl {
+  text-align: start;
+  padding: 20px 40px 20px 40px;
+}
+
+.ide-small {
+  text-align: start;
+  padding: 20px 40px 20px 40px;
+  width: 50%;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+.article-flex {
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 600px) {
+    flex-flow: column;
+  }
+}
+
+.article-column {
+  flex-direction: column;
+}
+
+.article-text-half {
+  width: 50%;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+    padding: 0px;
+  }
+  padding: 20px 40px 20px 40px;
+  align-self: center;
+}
+
+.indent {
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.article-title {
+  font-weight: 700;
+  font-family: initial;
+  padding: 40px 0px 15px 0px;
+  display: list-item;
+  list-style-position: inside;
+}
+
+.title-left {
+  text-align: left;
+  padding-left: 60px;
+}
+
+.tutorial-title {
+  font-size: 50px;
+  font-family: initial;
+  @media only screen and (max-width: 600px) {
+  }
+}
+
+.intro-title {
+  font-size: 25px;
+  @media only screen and (max-width: 600px) {
+  }
+}
+
+.intro-solo {
+  flex-direction: column;
+}
+
+.article-text {
+  text-align: left;
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+  }
+}
+
+.svg-box {
+  font-size: 18px;
+  font-style: italic;
+  font-stretch: extra-condensed;
+  padding: 30px 0px 70px 0px;
+  text-align: -webkit-center;
+  text-align: -moz-center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.svg-description {
+  width: max-content;
+}
+
+.article-center {
+  align-self: center;
+}
+.article-box {
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+}
+
+.title-svg {
+  padding-top: 25px;
+  svg {
+    height: 100%;
+  }
+}
+
+.white-back {
+  background-color: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,17 @@
+<div class="main-content ">
+  <app-header></app-header>
+  <div class="input-center white">
+    <ng-container [ngSwitch]="strategy">
+      <ng-container *ngSwitchCase="'choice'"
+        ><app-choice></app-choice>
+      </ng-container>
+      <ng-container *ngSwitchCase="'theme'">
+        <app-theme></app-theme>
+      </ng-container>
+      <ng-container *ngSwitchCase="'article'">
+        <app-tutorial></app-tutorial>
+      </ng-container>
+    </ng-container>
+  </div>
+  <router-outlet></router-outlet>
+</div>

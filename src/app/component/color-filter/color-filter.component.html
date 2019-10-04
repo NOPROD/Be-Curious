@@ -1,0 +1,11 @@
+<nz-switch
+  [ngModel]="switchValue"
+  [nzCheckedChildren]="checkedTemplate"
+  [nzUnCheckedChildren]="unCheckedTemplate"
+  nzSize="default"
+  (click)="changeFilter()"
+></nz-switch>
+<ng-template #checkedTemplate><i nz-icon nzType=""></i></ng-template>
+<ng-template #unCheckedTemplate
+  ><i nz-icon nzType="bulb" nzTheme="fill"></i
+></ng-template>

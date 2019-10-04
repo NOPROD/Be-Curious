@@ -1,0 +1,22 @@
+<div class="main-content ">
+  <app-header></app-header>
+  <div class="input-center">
+    <app-input
+      (asSearch)="search($event)"
+      (isLoading)="setStatus($event)"
+      (isEmpty)="searchAll()"
+    ></app-input>
+  </div>
+  <div nz-row *ngIf="results$ | async; let results">
+    <div nz-row nzType="flex" nzJustify="center" nzAlign="middle">
+      <app-result-box
+        *ngFor="let result of results"
+        [data]="result._source.data"
+        [dataId]="result._id.toString()"
+        [loading]="loading"
+      ></app-result-box>
+    </div>
+  </div>
+</div>
+<ng-component #loadingSpinner></ng-component>
+<router-outlet></router-outlet>

@@ -1,0 +1,25 @@
+// Main
+@import '../assets/theme/main.scss';
+
+// all animation
+@import '../assets/theme/imports/animation';
+
+// all component
+@import '../assets/theme/imports/component';
+
+// all modal
+@import '../assets/theme/imports/modals';
+
+// all page
+@import '../assets/theme/imports/pages';
+
+// all pop-up
+@import '../assets/theme/imports/pop-up';
+
+// all utils
+@import '../assets/theme/imports/utils';
+
+// Code mirror
+@import '~codemirror/lib/codemirror';
+@import '~codemirror/theme/material';
+@import '~codemirror/addon/lint/lint.css';

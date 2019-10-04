@@ -1,0 +1,41 @@
+app-color-filter {
+  position: absolute;
+  right: 56px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (max-width: 600px) {
+    right: 15px;
+  }
+}
+
+.path-blk {
+  svg path {
+    fill: black;
+  }
+}
+
+.path-white {
+  svg path {
+    fill: aliceblue;
+  }
+}
+
+.path-disabled {
+  svg path {
+    fill: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.color-content {
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+}
+.svg-mobile {
+  svg {
+    @media only screen and (max-width: 600px) {
+      width: 50px !important;
+    }
+  }
+}

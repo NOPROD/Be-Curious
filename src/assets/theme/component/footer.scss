@@ -1,0 +1,51 @@
+.footer {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #32395a;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @media only screen and (min-width: 600px) {
+    margin-left: 100px;
+  }
+  height: 50px;
+}
+
+.footer-content {
+}
+
+.height-ng-icon {
+  height: 20px;
+}
+
+.footer-icon svg {
+  padding: 0px 15px 0px 15px;
+  width: 50px;
+}
+
+.footer-text {
+  margin-bottom: 0;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.footer-separation {
+  border: none;
+  opacity: 0.5;
+  border-bottom: 1px dashed;
+  margin-block-end: 0.5em;
+  margin-block-start: 0.5em;
+  margin: -3px 0 2px 0px;
+  overflow: hidden;
+  margin-inline-start: 0.5em;
+  margin-inline-end: 0.5em;
+  border-width: 1px;
+}

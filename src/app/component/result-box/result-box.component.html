@@ -1,0 +1,54 @@
+<nz-card
+  (click)="openLink()"
+  [nzHoverable]="true"
+  class="result-card"
+  [nzLoading]="loading"
+  [nzBordered]="true"
+  style="width:300px;"
+  [nzCover]="coverTemplate"
+>
+  <nz-skeleton
+    [nzActive]="true"
+    [nzLoading]="loading"
+    [nzAvatar]="avatarTemplate"
+  >
+    <div nz-tooltip class="result-tag">
+      <nz-tag
+        nz-tooltip
+        nzTitle="Tag : {{ tag.tag }}"
+        *ngFor="let tag of tags"
+        [nzColor]="tag.color"
+        >{{ tag.tag }}</nz-tag
+      >
+    </div>
+    <i
+      class="type-icon"
+      nz-icon
+      [nzType]="data.format === 'Article' ? 'file-text' : 'sound'"
+      nzTheme="twotone"
+      nz-tooltip
+      [nzTitle]="titleIconTemplate"
+    ></i>
+    <nz-card-meta
+      nzPlacement="top"
+      nzTitle="{{ data.title }}"
+      nzDescription="{{ data.description.trim() }}"
+      nz-tooltip
+    ></nz-card-meta>
+  </nz-skeleton>
+</nz-card>
+<ng-template #avatarTemplate> </ng-template>
+<ng-template #coverTemplate>
+  <img alt="example" src="{{ data.image }}" />
+</ng-template>
+
+<ng-template #titleIconTemplate>
+  <i
+    nz-icon
+    [type]="data.format === 'Article' ? 'file-text' : 'sound'"
+    style="margin-right: 8px"
+  ></i>
+  <span>{{
+    data.format === 'Article' ? 'Article à lire' : 'Vidéo Youtube'
+  }}</span>
+</ng-template>
